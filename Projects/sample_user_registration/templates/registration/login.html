@@ -1,0 +1,18 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Login</h1>
+
+{% if user.is_authenticated %}
+Hi, ({{ user.username }}). <a href="{% url auth_logout %}">Logout</a>
+{% else %}
+
+{% include "form.html" %}
+    
+<ul class="linkList">
+    <li><a href="{% url auth_password_reset %}">Forgot your password?</a></li>
+    <li><a href="{% url registration_register %}">Register</a></li>
+</ul>   
+{% endif %}
+{% endblock %}

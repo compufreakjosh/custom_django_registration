@@ -1,0 +1,16 @@
+[    
+  {
+    "model": "sample_user_registration.City",
+    "pk": 1,
+    "fields": {      
+      "name": "city one"
+    }
+  },
+  {
+    "model": "sample_user_registration.City",
+    "pk": 2,
+    "fields": {      
+      "name": "city two"
+    }
+  }  
+]

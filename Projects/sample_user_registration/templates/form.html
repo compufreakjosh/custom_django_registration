@@ -1,0 +1,27 @@
+<div class="red">
+{% if form.non_field_errors %}
+{{ form.non_field_errors }}
+{% endif %}
+</div>
+
+<form method="post" action="" class="accountForm marginTop">
+	<table class="" cellspacing="10">
+	{% for field in form %}
+		<tr>
+			<td><p class="hint {%if field.field.required %} bold {% endif %}"{{ field.label_tag }}</p>
+			{{ field }}</td>
+				
+			{% if field.help_text %}<td class="clearfix">{{ field.help_text }}</td>{% endif %}
+			{% if field.errors %}<td class="myerrors clearfix">{{ field.errors }}</td>{% endif %}
+		
+		</tr>
+	{% endfor %}
+		<tr>
+			<td colspan="3" >				
+				<big><input type="submit" value="OK" class="big"></big>
+			</td>
+		</tr>
+		
+	</table>
+
+</form>
